@@ -45,7 +45,7 @@ jobs:
       - name: Build Angular
         run: |
           cd src/podo-web
-          npm run build
+          npm run build --deploy-url /podo-web
           # This will produce files in dist/podo-web/browser
 
       - name: Setup Pages
