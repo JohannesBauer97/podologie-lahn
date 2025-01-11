@@ -1,0 +1,93 @@
+<div class="flex flex-col min-h-screen">
+
+  <!-- Top Bar -->
+  <header class="select-none sm:mt-3">
+    <div class="container mx-auto p-3 flex justify-between items-center">
+      <!-- Logo and Title -->
+      <div (click)="closeMobileNav()" class="flex items-center cursor-pointer" routerLink="">
+        <img alt="Podologie Lahn Logo" class="w-10 h-10 mr-2" src="assets/img/logo.svg">
+        <h1 class="m-0 p-0">Podologie Lahn</h1>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-4 uppercase">
+          <li><a [routerLinkActiveOptions]="{exact: true}" aria-label="Navigiere zur Startseite"
+                 class="hover:text-lime-400 hover:duration-200" routerLink=""
+                 routerLinkActive="text-lime-500">Home</a>
+          </li>
+          <li><a aria-label="Navigiere zur über mich Seite" class="hover:text-lime-500 hover:duration-200"
+                  routerLink="ueber" routerLinkActive="text-lime-500">Über
+            mich</a></li>
+          <li><a aria-label="Navigiere zur Leistungen Seite" class="hover:text-lime-500 hover:duration-200"
+
+                 routerLink="leistungen" routerLinkActive="text-lime-500">Leistungen</a></li>
+          <li><a aria-label="Navigiere zur Podo-Taping Seite" class="hover:text-lime-500 hover:duration-200"
+
+                 routerLink="podo-taping" routerLinkActive="text-lime-500">Podo-Taping Konzept</a></li>
+          <li><a aria-label="Navigiere zur Anfahrt und Kontakt Seite" class="hover:text-lime-500 hover:duration-200"
+                  routerLink="kontakt" routerLinkActive="text-lime-500">Anfahrt
+            & Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation Toggle -->
+      <button (click)="toggleMobileNav()" aria-label="Steuert das Seitenmenü" class="md:hidden" type="button">
+        <fa-icon [icon]="bars" size="xl"></fa-icon>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+    <nav *ngIf="isMobileNavVisible" class="md:hidden text-center mb-4">
+      <ul class="space-y-4 py-2 px-4 uppercase">
+        <li (click)="closeMobileNav()" class="border-gray-100 rounded border-2 p-2" routerLink="">
+          <a (click)="closeMobileNav()" [routerLinkActiveOptions]="{exact: true}" aria-label="Navigiere zur Startseite"
+             class="hover:text-lime-500"
+             routerLink="" routerLinkActive="text-lime-500">Home</a>
+        </li>
+        <li (click)="closeMobileNav()" class="border-gray-100 rounded border-2 p-2" routerLink="ueber">
+          <a (click)="closeMobileNav()" aria-label="Navigiere zur über Seite" class="hover:text-lime-500"
+              routerLink="ueber" routerLinkActive="text-lime-500">Über
+            mich</a>
+        </li>
+        <li (click)="closeMobileNav()" class="border-gray-100 rounded border-2 p-2" routerLink="leistungen">
+          <a (click)="closeMobileNav()" aria-label="Navigiere zur Leistungen Seite" class="hover:text-lime-500"
+
+             routerLink="leistungen" routerLinkActive="text-lime-500">Leistungen</a>
+        </li>
+        <li (click)="closeMobileNav()" class="border-gray-100 rounded border-2 p-2" routerLink="podo-taping">
+          <a (click)="closeMobileNav()" aria-label="Navigiere zur Podo-Taping Seite" class="hover:text-lime-500"
+
+             routerLink="podo-taping" routerLinkActive="text-lime-500">Podo-Taping Konzept</a>
+        </li>
+        <li (click)="closeMobileNav()" class="border-gray-100 rounded border-2 p-2" routerLink="kontakt">
+          <a (click)="closeMobileNav()" aria-label="Navigiere zur Anfahrt und Kontakt Seite" class="hover:text-lime-500"
+
+             routerLink="kontakt" routerLinkActive="text-lime-500">Anfahrt & Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 sm:py-10">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-lime-500 text-white py-4 select-none">
+    <div class="container mx-auto text-center">
+      <p class="leading-tight">
+        Copyright &copy; {{ currentYear }} Podologie Lahn |
+        <a aria-label="Navigiere zum Impressum" class="hover:underline hover:duration-200"  routerLink="impressum">Impressum</a>
+        -
+        <a aria-label="Navigiere zum Datenschutz" class="hover:underline hover:duration-200"
+           routerLink="datenschutz">Datenschutz</a>
+        -
+        <a aria-label="Navigiere zu den AGB" class="hover:underline hover:duration-200"
+            routerLink="agb">AGB</a>
+      </p>
+    </div>
+  </footer>
+
+</div>
