@@ -6,7 +6,7 @@ import {NgOptimizedImage} from '@angular/common';
 @Component({
   selector: 'app-podo-taping',
   templateUrl: './podo-taping.component.html',
-  styleUrls: ['./podo-taping.component.scss'],
+  styleUrls: ['./podo-taping.component.css'],
   imports: [FontAwesomeModule, NgOptimizedImage]
 })
 export class PodoTapingComponent {

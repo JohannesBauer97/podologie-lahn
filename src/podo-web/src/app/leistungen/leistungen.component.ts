@@ -6,7 +6,7 @@ import {NgOptimizedImage} from '@angular/common';
 @Component({
   selector: 'app-leistungen',
   templateUrl: './leistungen.component.html',
-  styleUrls: ['./leistungen.component.scss'],
+  styleUrls: ['./leistungen.component.css'],
   imports: [FontAwesomeModule, NgOptimizedImage]
 })
 export class LeistungenComponent {

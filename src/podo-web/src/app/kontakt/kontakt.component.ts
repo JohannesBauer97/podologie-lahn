@@ -5,7 +5,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-kontakt',
   templateUrl: './kontakt.component.html',
-  styleUrls: ['./kontakt.component.scss'],
+  styleUrls: ['./kontakt.component.css'],
   imports: [FontAwesomeModule]
 })
 export class KontaktComponent {
