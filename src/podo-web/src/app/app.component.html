@@ -39,7 +39,7 @@
 
     <!-- Mobile Navigation Links -->
     <nav *ngIf="isMobileNavVisible" class="md:hidden text-center mb-4">
-      <ul class="space-y-4 py-2 px-4 uppercase">
+      <ul class="gap-y-4 py-2 px-4 uppercase">
         <li (click)="closeMobileNav()" class="border-gray-100 rounded-sm border-2 p-2" routerLink="">
           <a (click)="closeMobileNav()" [routerLinkActiveOptions]="{exact: true}" aria-label="Navigiere zur Startseite"
              class="hover:text-lime-500"
