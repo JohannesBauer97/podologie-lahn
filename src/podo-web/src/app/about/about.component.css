@@ -1,19 +1,19 @@
-#berufspraxis {
-  fa-icon {
-    @apply text-2xl;
-    @apply mr-5;
-  }
+@reference "../../styles.css";
 
-  li {
-    @apply py-3;
-    @apply border-b-2;
-    @apply border-gray-50;
-    @apply flex;
-    @apply flex-row;
-    @apply items-center;
+#berufspraxis fa-icon {
+  @apply text-2xl;
+  @apply mr-5;
+}
 
-    &:last-child {
-      @apply border-0;
-    }
-  }
+#berufspraxis li {
+  @apply py-3;
+  @apply border-b-2;
+  @apply border-gray-50;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+}
+
+#berufspraxis li:last-child {
+  @apply border-0;
 }
