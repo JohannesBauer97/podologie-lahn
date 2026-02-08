@@ -12,12 +12,14 @@ import {LeistungenComponent} from './leistungen/leistungen.component';
 import {PodoTapingComponent} from './podo-taping/podo-taping.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {AppRoutingModule} from "./app-routing.module";
+import { UnderConstructionComponent } from './under-construction/under-construction.component';
+import { AppConstructionRoutingModule } from './under-construction/app-construction-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppConstructionRoutingModule,
     FontAwesomeModule,
     AboutComponent,
     AgbComponent,
@@ -35,7 +37,7 @@ import {AppRoutingModule} from "./app-routing.module";
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [UnderConstructionComponent]
 })
 export class AppModule {
 }
