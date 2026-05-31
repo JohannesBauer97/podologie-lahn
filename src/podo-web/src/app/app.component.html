@@ -38,7 +38,7 @@
   </div>
 
   <!-- Mobile Navigation Links -->
-  @if (isMobileNavVisible) {
+  @if (isMobileNavVisible()) {
     <nav class="md:hidden text-center mb-4">
       <ul class="gap-y-4 py-2 px-4 uppercase">
         <li (click)="closeMobileNav()" class="border-gray-100 rounded-sm border-2 p-2" routerLink="">

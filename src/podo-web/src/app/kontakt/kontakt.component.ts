@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {faBusinessTime, faMapLocationDot, faPhone} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
@@ -6,6 +6,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
   selector: 'app-kontakt',
   templateUrl: './kontakt.component.html',
   styleUrls: ['./kontakt.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FontAwesomeModule]
 })
 export class KontaktComponent {
