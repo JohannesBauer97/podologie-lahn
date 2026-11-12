@@ -2,21 +2,6 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <!-- LEGACY-REDIRECT -->
-  <script>
-    // Alte Adressen der früheren Single-Page-App (z. B. /?/kontakt) auf die neuen Seiten umleiten.
-    // Es wird nur innerhalb dieser Website weitergeleitet, nie auf fremde Adressen.
-    (function (l) {
-      if (l.search.charAt(1) !== '/') return;
-      var parts = l.search.slice(2).split('&');
-      var path = parts.shift().replace(/~and~/g, '&').replace(/^[\s\/\\]+/, '');
-      if (path && path.slice(-1) !== '/') path += '/';
-      var query = parts.join('&').replace(/~and~/g, '&');
-      var target = new URL('/' + path + (query ? '?' + query : '') + l.hash, l.href);
-      if (target.origin === l.origin) l.replace(target.href);
-    })(window.location);
-  </script>
-  <!-- /LEGACY-REDIRECT -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Podologie Lahn</title>
   <!-- PAGE-SPECIFIC -->

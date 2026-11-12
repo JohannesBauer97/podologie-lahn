@@ -86,7 +86,6 @@ Sie stehen an mehreren Stellen. Ändere immer alle:
 
 **Nicht anfassen ohne ausdrücklichen Auftrag**
 - `ngsw-worker.js` in beiden Ordnern.
-- Das Skript `<!-- LEGACY-REDIRECT -->` in `site/index.html`: Es leitet alte Adressen wie `/?/kontakt` um und darf nur innerhalb der eigenen Domain weiterleiten.
 - `CNAME` und den Workflow.
 
 ## Vor dem Abschluss prüfen
