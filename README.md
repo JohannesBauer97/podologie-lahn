@@ -18,7 +18,7 @@ Website der Podologie Lahn ([podologie-lahn.de](https://podologie-lahn.de)) – 
 1. Auf GitHub das Repository öffnen → Reiter **Actions** → links **Deploy**.
 2. Rechts **Run workflow** klicken.
 3. Modus wählen: **wartung** (Wartungsseite) oder **live** (Website).
-4. **Run workflow** bestätigen. Nach etwa einer Minute ist die Änderung online.
+4. **Run workflow** bestätigen. Nach wenigen Minuten ist die Änderung online (der Workflow selbst braucht etwa eine Minute, danach können Browser und GitHub die alte Version noch bis zu zehn Minuten zwischenspeichern).
 
 Das funktioniert auch im Browser am Handy. Ein normaler Push veröffentlicht bewusst nichts – online geht immer nur, was per Button gewählt wurde.
 
@@ -27,6 +27,8 @@ Das funktioniert auch im Browser am Handy. Ein normaler Push veröffentlicht bew
 1. Die betreffende `index.html` in `site/` bearbeiten (z. B. Öffnungszeiten auf der Startseite und in `site/kontakt/index.html`).
 2. Committen und pushen.
 3. Über den Button oben neu veröffentlichen (Modus wie gewünscht).
+
+Adresse, Telefonnummer, E-Mail und Öffnungszeiten stehen zusätzlich in den strukturierten Daten für Suchmaschinen: im Block `<script type="application/ld+json">` in `site/index.html` und in `maintenance/index.html`. Bei Änderungen dort bitte mit anpassen, sonst zeigt Google weiter die alten Angaben.
 
 Header und Footer stehen in jeder Seite als Kopie. Wer das Menü oder den Footer ändert, ändert ihn in allen Dateien gleich – die Stellen sind mit `<!-- HEADER -->` und `<!-- FOOTER -->` markiert.
 
