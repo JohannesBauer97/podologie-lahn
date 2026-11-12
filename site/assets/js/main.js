@@ -35,6 +35,7 @@
       frame.referrerPolicy = 'no-referrer-when-downgrade';
       frame.allowFullscreen = true;
       map.replaceWith(frame);
+      frame.focus(); // Tastaturfokus bleibt bei der Karte statt an den Seitenanfang zu springen
     });
   }
 })();

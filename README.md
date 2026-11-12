@@ -9,7 +9,7 @@ Website der Podologie Lahn ([podologie-lahn.de](https://podologie-lahn.de)) – 
 | `site/` | Die eigentliche Website. Jede Seite ist eine eigene `index.html` (`site/kontakt/index.html` = `/kontakt/`). |
 | `site/assets/css/styles.css` | Das gesamte Styling. |
 | `site/assets/js/main.js` | Mobiles Menü, Jahreszahl im Footer, Karte erst nach Klick laden. |
-| `maintenance/` | Die Seite „Website in Wartung“ (komplett eigenständig). |
+| `maintenance/` | Die Seite „Website in Wartung“ (komplett eigenständig). Logo und Vorschaubild liegen hier als Kopie, weil die strukturierten Daten für Google auf sie verweisen. |
 | `.github/workflows/deploy.yml` | Veröffentlichung auf GitHub Pages. |
 | `res/` | Originalfotos. |
 
