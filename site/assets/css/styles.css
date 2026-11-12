@@ -307,6 +307,76 @@ h4 { font-size: var(--text-base); line-height: var(--leading-base); font-weight:
 .lead { text-align: center; margin-bottom: 2.25rem; }
 .notice { color: var(--red-900); text-align: center; }
 
+/* Inhaltsseiten (Leistungen, Podo-Taping) */
+.content-page { display: flex; flex-direction: column; align-items: center; padding: 0.75rem; }
+.page-title { margin-top: 0; font-size: var(--text-3xl); line-height: var(--leading-3xl); text-align: center; }
+.section-title { text-align: center; }
+@media (min-width: 640px) { .section-title { margin-top: 4rem; } }
+
+.photo { border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
+
+.media-row { display: flex; flex-direction: row; flex-wrap: wrap; width: 100%; }
+.media-row-reverse { flex-wrap: wrap-reverse; }
+.media-text { display: flex; flex-direction: column; width: 100%; align-self: center; }
+.media-text-centered { align-items: center; }
+.media-photo { display: flex; justify-content: center; width: 100%; margin-top: 0.75rem; }
+@media (min-width: 640px) {
+  .media-text { width: calc(2 / 3 * 100%); }
+  .media-photo { width: calc(1 / 3 * 100%); }
+}
+.media-title { margin-top: 1rem; text-align: center; }
+.title-lg { font-size: var(--text-3xl); line-height: var(--leading-3xl); }
+@media (min-width: 640px) { .media-title { margin-top: 0; text-align: left; } }
+.media-list { list-style: disc inside; padding-inline: 0.75rem; }
+.media-lead { margin-bottom: 0.5rem; text-align: center; }
+
+.rule { width: 100%; height: 0; margin-block: 5rem; border-top: 1px solid var(--gray-300); color: inherit; }
+
+.feature-grid { display: flex; flex-direction: row; flex-wrap: wrap; }
+.feature { width: 100%; text-align: center; }
+.feature + .feature { margin-top: 2.5rem; }
+.feature .icon { color: var(--lime-500); }
+.feature-title { margin: 0.75rem 0; font-size: var(--text-lg); line-height: var(--leading-lg); font-weight: 700; }
+.feature-title-light { font-weight: 400; }
+.feature-list { list-style: disc outside; text-align: left; padding-left: 1.25rem; }
+@media (min-width: 640px) {
+  .feature + .feature { margin-top: 0; }
+  .feature-grid-2 .feature { width: 50%; }
+  .feature-grid-3 .feature { width: calc(1 / 3 * 100%); }
+  .feature-grid-5 .feature { width: 20%; }
+  .taping-intro { margin-top: 1.25rem; }
+  .taping-features { margin-top: 4rem; }
+}
+
+/* Über mich */
+.about { display: flex; flex-direction: column; padding: 0.75rem; }
+.about-intro { display: flex; flex-direction: row; flex-wrap: wrap; }
+.about-photo { display: flex; justify-content: center; width: 100%; }
+.about-quote { display: flex; width: 100%; margin-top: 0.75rem; }
+.about-quote p {
+  align-self: center;
+  text-align: center;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-2xl);
+  font-weight: 100;
+  font-style: italic;
+}
+@media (min-width: 640px) {
+  .about-photo, .about-quote { width: 50%; }
+  .about-quote { margin-top: 0; }
+}
+.divider-center { align-self: center; margin-top: 2.25rem; }
+.practice-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-block: 0.75rem;
+  border-bottom: 2px solid var(--gray-50);
+}
+.practice-list li:last-child { border-bottom: 0; }
+.practice-icon { font-size: var(--text-2xl); line-height: var(--leading-2xl); margin-right: 1.25rem; }
+.practice-heading { margin: 0; font-size: var(--text-lg); line-height: var(--leading-lg); font-weight: 500; }
+
 /* 8. Barrierefreiheit ---------------------------------------------------- */
 :focus-visible { outline: 2px solid var(--lime-500); outline-offset: 2px; }
 
