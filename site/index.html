@@ -2,11 +2,85 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
+  <!-- LEGACY-REDIRECT -->
+  <script>
+    // Alte Adressen der früheren Single-Page-App (z. B. /?/kontakt) auf die neuen Seiten umleiten.
+    (function (l) {
+      if (l.search.charAt(1) !== '/') return;
+      var parts = l.search.slice(2).split('&');
+      var path = parts.shift().replace(/~and~/g, '&').replace(/^\/+/, '');
+      if (path && path.slice(-1) !== '/') path += '/';
+      var query = parts.join('&').replace(/~and~/g, '&');
+      l.replace('/' + path + (query ? '?' + query : '') + l.hash);
+    })(window.location);
+  </script>
+  <!-- /LEGACY-REDIRECT -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Podologie Lahn</title>
+  <!-- PAGE-SPECIFIC -->
+  <meta name="description" content="Podologie Lahn in Wusterwitz: medizinische Fußpflege für alle Fußprobleme, besonders für Risikopatienten wie Diabetiker, Rheumatiker und Gefäßpatienten.">
+  <link rel="canonical" href="https://podologie-lahn.de/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Podologie Lahn">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Podologie Lahn">
+  <meta property="og:description" content="Podologie Lahn in Wusterwitz: medizinische Fußpflege für alle Fußprobleme, besonders für Risikopatienten wie Diabetiker, Rheumatiker und Gefäßpatienten.">
+  <meta property="og:url" content="https://podologie-lahn.de/">
+  <meta property="og:image" content="https://podologie-lahn.de/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Podologie Lahn – Medizinische Fußpflege in Wusterwitz">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Podiatric",
+    "@id": "https://podologie-lahn.de/#praxis",
+    "name": "Podologie Lahn",
+    "description": "Podologie Lahn bietet professionelle podologische Behandlung (medizinische Fußpflege) für alle Fußprobleme, insbesondere für Risikopatienten wie Diabetiker, Rheumatiker und Patienten mit Gefäßerkrankungen",
+    "url": "https://podologie-lahn.de/",
+    "sameAs": [
+      "https://www.podologie-lahn.de"
+    ],
+    "logo": "https://podologie-lahn.de/assets/img/logo.svg",
+    "image": "https://podologie-lahn.de/assets/img/og-image.jpg",
+    "email": "kontakt@podologie-lahn.de",
+    "telephone": "+4933839329063",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bahnhofstrasse 12",
+      "addressLocality": "Wusterwitz",
+      "addressRegion": "Brandenburg",
+      "postalCode": "14789",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.3858,
+      "longitude": 12.37005
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "opens": "08:00",
+        "closes": "16:00"
+      }
+    ],
+    "foundingDate": "2015"
+  }
+  </script>
+  <!-- /PAGE-SPECIFIC -->
   <meta name="theme-color" content="#83cc16">
   <!-- Icons: Font Awesome Free (https://fontawesome.com), CC BY 4.0 -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/styles.css">
   <script src="/assets/js/main.js" defer></script>
