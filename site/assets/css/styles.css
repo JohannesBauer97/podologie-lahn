@@ -384,6 +384,18 @@ h4 { font-size: var(--text-base); line-height: var(--leading-base); font-weight:
 .map-external { text-decoration-line: underline; }
 .map-external { font-size: var(--text-sm); line-height: var(--leading-sm); }
 
+/* Rechtstexte: Impressum, Datenschutz, AGB */
+.legal { padding: 0.75rem; margin-bottom: 0.75rem; }
+.legal h1 { margin-top: 0; }
+.legal-justify p { text-align: justify; }
+.legal-para { margin-bottom: 1rem; }
+.legal-list { list-style: disc inside; }
+.legal-list > li:not(:last-child) { margin-bottom: 0.5rem; }
+.legal a { overflow-wrap: anywhere; }
+@media (hover: hover) {
+  .legal a:hover { text-decoration-line: underline; }
+}
+
 /* Über mich */
 .about { display: flex; flex-direction: column; padding: 0.75rem; }
 .about-intro { display: flex; flex-direction: row; flex-wrap: wrap; }
