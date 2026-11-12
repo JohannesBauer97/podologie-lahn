@@ -10,6 +10,8 @@
 :root {
   --lime-400: oklch(84.1% 0.238 128.85);
   --lime-500: oklch(76.8% 0.233 130.85);
+  --lime-700: oklch(53.2% 0.157 131.589);
+  --lime-800: oklch(45.3% 0.124 130.933);
   --gray-50: oklch(98.5% 0.002 247.839);
   --gray-100: oklch(96.7% 0.003 264.542);
   --gray-200: oklch(92.8% 0.006 264.531);
@@ -371,13 +373,13 @@ h4 { font-size: var(--text-base); line-height: var(--leading-base); font-weight:
   min-height: 44px;
   padding: 0.625rem 1.5rem;
   border-radius: 9999px;
-  background-color: var(--lime-500);
+  background-color: var(--lime-700);
   color: var(--white);
   font-weight: 500;
   transition: background-color 0.2s var(--ease-in-out);
 }
 @media (hover: hover) {
-  .map-button:hover { background-color: oklch(64.8% 0.2 131.684); }
+  .map-button:hover { background-color: var(--lime-800); }
 }
 .map-hint { max-width: 32rem; font-size: var(--text-sm); line-height: var(--leading-sm); }
 .map-hint a,
