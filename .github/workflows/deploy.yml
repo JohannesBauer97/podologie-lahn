@@ -1,0 +1,66 @@
+# Veröffentlicht die Website auf GitHub Pages – nur per Button:
+# Actions → "Deploy" → "Run workflow" → Modus wählen.
+#   wartung → Ordner maintenance/ (Hinweis "Website in Wartung")
+#   live    → Ordner site/ (die eigentliche Website)
+# Ein normaler Push deployt bewusst NICHT, damit der Modus nie versehentlich wechselt.
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Was soll online gehen?"
+        required: true
+        type: choice
+        options:
+          - wartung
+          - live
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ordner wählen
+        id: dir
+        env:
+          MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$MODE" = "live" ]; then
+            echo "path=site" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=maintenance" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.dir.outputs.path }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Zusammenfassung
+        env:
+          MODE: ${{ inputs.mode }}
+          DIR: ${{ steps.dir.outputs.path }}
+        run: |
+          echo "Deployt: Modus **$MODE** (\`$DIR/\`)" >> "$GITHUB_STEP_SUMMARY"

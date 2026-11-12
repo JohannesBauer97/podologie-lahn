@@ -1,3 +1,0 @@
-Sitemap: https://podologie-lahn.de/sitemap.xml
-User-agent: *
-Allow: /

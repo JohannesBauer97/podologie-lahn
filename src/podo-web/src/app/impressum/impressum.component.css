@@ -1,9 +1,0 @@
-.first-headline {
-  margin-top: initial;
-}
-
-a {
-  &:hover {
-    @apply underline;
-  }
-}
